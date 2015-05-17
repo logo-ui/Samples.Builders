@@ -9,6 +9,7 @@ using LogoFX.UI.Navigation;
 using LogoUI.Samples.Client.Gui.Shared.UiServices;
 using LogoUI.Samples.Client.Model.Contracts;
 using LogoUI.Samples.Client.Model.Shared;
+using Solid.Practices.Scheduling;
 
 namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
 {
@@ -19,7 +20,8 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
         IShellCloseService        
     {
         private readonly ILoginService _loginService;
-        private readonly INavigationService _navigationService;        
+        private readonly INavigationService _navigationService;
+        private readonly TaskFactory _taskFactory = TaskFactoryFactory.CreateTaskFactory();
 
         public ShellViewModel(
             ILoginService loginService,
@@ -78,7 +80,7 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
 
         private void GotoLogin()
         {
-            Task.Factory.StartNew(() => Execute.BeginOnUIThread(() => _navigationService.Navigate<LoginViewModel>()));
+            _taskFactory.StartNew(() => Execute.BeginOnUIThread(() => _navigationService.Navigate<LoginViewModel>()));
         }
 
         private void OnDeactivated(object sender, DeactivationEventArgs e)
@@ -104,13 +106,6 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
             base.OnActivate();
             ScreenExtensions.TryActivate(ChildWindow);
             GotoLogin();
-        }
-
-        protected override void OnViewLoaded(object view)
-        {
-            base.OnViewLoaded(view);
-
-            GC.Collect();
         }
 
         protected override void OnDeactivate(bool close)
@@ -184,7 +179,7 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
             var taskCompletionSource = new TaskCompletionSource<bool?>();
             ChildWindow = new ChildWindowViewModel(rootModel, context, taskCompletionSource);
 
-            Task.Factory.StartNew(() =>
+            _taskFactory.StartNew(() =>
             {
                 taskCompletionSource.Task.Wait();
                 ChildWindow = null;

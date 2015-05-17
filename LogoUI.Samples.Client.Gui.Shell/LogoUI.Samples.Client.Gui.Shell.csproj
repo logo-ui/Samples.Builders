@@ -123,6 +123,10 @@
     <Reference Include="Solid.Practices.Modularity">
       <HintPath>..\Lib\Solid\Solid.Practices.Modularity.dll</HintPath>
     </Reference>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LogoUI.Samples.Client.Gui.Shared\Bin\Debug\Solid.Practices.Scheduling.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Reactive.Core">
@@ -155,6 +159,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BootstrapperBase.cs" />
     <Compile Include="HomeModule\HomeUIModule.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>

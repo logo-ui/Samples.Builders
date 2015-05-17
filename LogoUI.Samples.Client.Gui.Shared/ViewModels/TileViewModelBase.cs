@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Caliburn.Micro;
 using LogoFX.UI.Commanding;
 using LogoFX.UI.Navigation;
@@ -10,6 +11,7 @@ namespace LogoUI.Samples.Client.Gui.Shared.ViewModels
         where T : class
     {        
         private readonly Func<T> _loadFunc;
+        private readonly TaskFactory _taskFactory = TaskFactoryFactory.CreateTaskFactory();
 
         protected TileViewModelBase(
             string title, 
@@ -94,8 +96,7 @@ namespace LogoUI.Samples.Client.Gui.Shared.ViewModels
         private async void StartLoad()
         {
             ActivateItem(null);
-            IsBusy = true;
-            var taskFactory = TaskFactoryFactory.CreateTaskFactory();
+            IsBusy = true;            
 
             try
             {
@@ -103,7 +104,7 @@ namespace LogoUI.Samples.Client.Gui.Shared.ViewModels
 
                 try
                 {
-                    result = await taskFactory.StartNew(_loadFunc);                    
+                    result = await _taskFactory.StartNew(_loadFunc);                    
                 }
 
                 catch (Exception err)

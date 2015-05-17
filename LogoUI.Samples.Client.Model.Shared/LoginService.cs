@@ -3,12 +3,14 @@ using System.Threading.Tasks;
 using LogoUI.Samples.Client.Data.Providers.Contracts;
 using LogoUI.Samples.Client.Model.Contracts;
 using LogoUI.Samples.Client.Model.Shared.UserManagement;
+using Solid.Practices.Scheduling;
 
 namespace LogoUI.Samples.Client.Model.Shared
 {
     public class LoginService : ILoginService
     {
         private readonly ILoginProvider _loginProvider;
+        private readonly TaskFactory _taskFactory = TaskFactoryFactory.CreateTaskFactory();
 
         public LoginService(ILoginProvider loginProvider)
         {
@@ -17,7 +19,7 @@ namespace LogoUI.Samples.Client.Model.Shared
 
         public Task<bool> Login(string loginName, string password, bool persist = false)
         {
-            return Task.Factory.StartNew(() =>
+            return _taskFactory.StartNew(() =>
             {
                 try
                 {
@@ -38,7 +40,7 @@ namespace LogoUI.Samples.Client.Model.Shared
 
         public Task<bool> LogOut()
         {
-            return Task.Factory.StartNew(() =>
+            return _taskFactory.StartNew(() =>
             {
                 try
                 {

@@ -7,12 +7,14 @@ using LogoUI.Samples.Client.Data.Contracts;
 using LogoUI.Samples.Client.Data.Providers.Contracts;
 using LogoUI.Samples.Client.Model.Contracts;
 using LogoUI.Samples.Client.Model.Contracts.Compliance;
+using Solid.Practices.Scheduling;
 
 namespace LogoUI.Samples.Client.Model.Shared
 {
     public class DataService : IDataService
     {
         private readonly IComplianceProvider _complianceProvider;
+        private readonly TaskFactory _taskFactory = TaskFactoryFactory.CreateTaskFactory();
 
         public DataService(IComplianceProvider complianceProvider)
         {
@@ -22,7 +24,7 @@ namespace LogoUI.Samples.Client.Model.Shared
         public Task<IEnumerable<IComplianceRecord>> GetComplianceRecordsAsync(IComplianceRecordsFilter filter)
         {
             return
-                Task.Factory.StartNew(
+                _taskFactory.StartNew(
                     () => (IEnumerable<IComplianceRecord>)_complianceProvider.GetComplianceRecords(filter.StartTime, filter.EndTime).Select(
                         ComplianceRecordMapper.ToComplianceRecord).ToArray());
         }
