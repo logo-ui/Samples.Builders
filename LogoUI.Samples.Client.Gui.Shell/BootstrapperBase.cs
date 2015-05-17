@@ -13,6 +13,12 @@ namespace LogoUI.Samples.Client.Gui.Shell
 {
     public abstract class BootstrapperBase : NavigationBootstrapper<ShellViewModel, ExtendedSimpleIocContainer>
     {
+        protected BootstrapperBase(ExtendedSimpleIocContainer iocContainer)
+            :base(iocContainer)
+        {
+            
+        }
+
         protected override void OnConfigure(ExtendedSimpleIocContainer container)
         {
             base.OnConfigure(container);

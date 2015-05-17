@@ -1,8 +1,7 @@
 ﻿<Application x:Class="LogoUI.Samples.Client.Gui.Shell.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:xaml="clr-namespace:LogoFX.UI.Views.Infra.Xaml;assembly=LogoFX.UI.Views.Infra"
-             xmlns:shell="clr-namespace:LogoUI.Samples.Client.Gui.Shell">
+             xmlns:xaml="clr-namespace:LogoFX.UI.Views.Infra.Xaml;assembly=LogoFX.UI.Views.Infra">
     <Application.Resources>
         <xaml:SharedResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -10,10 +9,7 @@
                 <xaml:SharedResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <xaml:SharedResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <xaml:SharedResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
-                <xaml:SharedResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
-                <xaml:SharedResourceDictionary>
-                    <shell:AppBootstrapper x:Key="AppBootstrapper"/>
-                </xaml:SharedResourceDictionary>
+                <xaml:SharedResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />                
             </ResourceDictionary.MergedDictionaries>
         </xaml:SharedResourceDictionary>         
     </Application.Resources>
