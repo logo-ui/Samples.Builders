@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Data.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Data.Providers.Real", "LogoUI.Samples.Client.Data.Providers.Real\LogoUI.Samples.Client.Data.Providers.Real.csproj", "{6C56DA4B-0426-489C-845C-57B1C0AD51A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fake", "Fake", "{AE714F63-AB90-4B46-8F95-251C5EE06C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Fake.Builders", "LogoUI.Samples.Fake.Builders\LogoUI.Samples.Fake.Builders.csproj", "{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +165,16 @@ Global
 		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
 		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.DebugWithFake|Any CPU.Build.0 = DebugWithFake|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.DebugWithMock|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.DebugWithMock|Any CPU.Build.0 = Debug|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -183,5 +197,6 @@ Global
 		{47BD9F45-48CC-46D2-9F02-2451A67BE8E7} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
 		{553749EC-1D43-4640-BC99-D74595D61E0A} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
 		{6C56DA4B-0426-489C-845C-57B1C0AD51A5} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
+		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7} = {AE714F63-AB90-4B46-8F95-251C5EE06C46}
 	EndGlobalSection
 EndGlobal

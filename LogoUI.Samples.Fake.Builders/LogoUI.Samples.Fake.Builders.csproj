@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{553749EC-1D43-4640-BC99-D74595D61E0A}</ProjectGuid>
+    <ProjectGuid>{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoUI.Samples.Client.Data.Providers.Fake</RootNamespace>
-    <AssemblyName>LogoUI.Samples.Client.Data.Providers.Fake</AssemblyName>
+    <RootNamespace>LogoUI.Samples.Fake.Builders</RootNamespace>
+    <AssemblyName>LogoUI.Samples.Fake.Builders</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
+    <OutputPath>bin\DebugWithFake\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,13 +39,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LogoFX.UI.Bootstraping.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstraping.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="LogoFX.UI.Bootstrapping.SimpleContainer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstrapping.SimpleContainer.dll</HintPath>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Fake.Builders">
       <HintPath>..\Lib\Solid\Solid.Fake.Builders.dll</HintPath>
@@ -53,22 +48,15 @@
     <Reference Include="Solid.Fake.Core">
       <HintPath>..\Lib\Solid\Solid.Fake.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Solid.Practices.IoC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Practices.Modularity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Solid\Solid.Practices.Modularity.dll</HintPath>
+    <Reference Include="Solid.Fake.Moq">
+      <HintPath>..\Lib\Solid\Solid.Fake.Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakeComplianceProvider.cs" />
-    <Compile Include="FakeLoginProvider.cs" />
-    <Compile Include="Module.cs" />
+    <Compile Include="ComplianceProviderBuilder.cs" />
+    <Compile Include="FakeFactoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,10 +68,9 @@
       <Project>{47BD9F45-48CC-46D2-9F02-2451A67BE8E7}</Project>
       <Name>LogoUI.Samples.Client.Data.Providers.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LogoUI.Samples.Fake.Builders\LogoUI.Samples.Fake.Builders.csproj">
-      <Project>{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}</Project>
-      <Name>LogoUI.Samples.Fake.Builders</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

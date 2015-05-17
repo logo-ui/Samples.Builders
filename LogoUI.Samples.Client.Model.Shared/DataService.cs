@@ -23,8 +23,8 @@ namespace LogoUI.Samples.Client.Model.Shared
         {
             return
                 Task.Factory.StartNew(
-                    () => _complianceProvider.GetComplianceRecords(filter.StartTime, filter.EndTime).Select(
-                        ComplianceRecordMapper.ToComplianceRecord));
+                    () => (IEnumerable<IComplianceRecord>)_complianceProvider.GetComplianceRecords(filter.StartTime, filter.EndTime).Select(
+                        ComplianceRecordMapper.ToComplianceRecord).ToArray());
         }
     }
 
