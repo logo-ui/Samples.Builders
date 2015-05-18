@@ -52,14 +52,31 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Core.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.UI.Modularity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Modularity.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.UI.Navigation">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.UI.Tests.Infra">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Tests.Infra.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.UI.ViewModels">
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.ViewModels.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.ViewModels.Interfaces">
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.ViewModels.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Fake.Builders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Solid\Solid.Fake.Builders.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Fake.Core">
       <HintPath>..\Lib\Solid\Solid.Fake.Core.dll</HintPath>
@@ -76,6 +93,10 @@
     <Reference Include="Solid.Practices.IoC">
       <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
     </Reference>
+    <Reference Include="Solid.Practices.Modularity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Solid\Solid.Practices.Modularity.dll</HintPath>
+    </Reference>
     <Reference Include="Solid.Practices.Scheduling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Bin\DebugWithFake\Solid.Practices.Scheduling.dll</HintPath>
@@ -90,6 +111,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComplianceLoadingTests.cs" />
+    <Compile Include="Fake\FakeLoginProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShellLoadingTests.cs" />
   </ItemGroup>
@@ -97,6 +120,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Data.Providers.Contracts\LogoUI.Samples.Client.Data.Providers.Contracts.csproj">
+      <Project>{47bd9f45-48cc-46d2-9f02-2451a67be8e7}</Project>
+      <Name>LogoUI.Samples.Client.Data.Providers.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Modularity\LogoUI.Samples.Client.Gui.Modularity.csproj">
+      <Project>{B4CAD13A-CF4C-4C59-A1D1-7E9A6CE0E745}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Modularity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Modules.Compliance\LogoUI.Samples.Client.Gui.Modules.Compliance.csproj">
+      <Project>{90B5349D-F98A-48BB-A9E6-56DF97CA2C5A}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Modules.Compliance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shared\LogoUI.Samples.Client.Gui.Shared.csproj">
       <Project>{86BCD015-0BC9-4374-B5A9-D70E0B88265F}</Project>
       <Name>LogoUI.Samples.Client.Gui.Shared</Name>
@@ -108,6 +143,10 @@
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Tests.Shared\LogoUI.Samples.Client.Gui.Tests.Shared.csproj">
       <Project>{82e1e02d-dfe6-4465-bfdf-175acc44650b}</Project>
       <Name>LogoUI.Samples.Client.Gui.Tests.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Fake.Builders\LogoUI.Samples.Fake.Builders.csproj">
+      <Project>{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7}</Project>
+      <Name>LogoUI.Samples.Fake.Builders</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -67,12 +67,6 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
             get { return UserContext.Current == null ? string.Empty : UserContext.Current.LoginName; }
         }
 
-        #region Public Methods
-
-        #endregion
-
-        #region Private Members
-
         private void CurrentChanged(object sender, EventArgs eventArgs)
         {
             NotifyOfPropertyChange(() => IsLoggedIn);
@@ -97,8 +91,6 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
             //which will handle the shutdown event
             //Application.Current.Shutdown();
         }
-
-        #endregion
 
         #region Overrides
 
