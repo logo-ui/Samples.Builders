@@ -13,8 +13,8 @@ namespace LogoUI.Samples.Client.Gui.Shell
 {
     public abstract class BootstrapperBase : NavigationBootstrapper<ShellViewModel, ExtendedSimpleIocContainer>
     {
-        protected BootstrapperBase(ExtendedSimpleIocContainer iocContainer)
-            :base(iocContainer)
+        protected BootstrapperBase(ExtendedSimpleIocContainer iocContainer,bool useApplication = true)
+            :base(iocContainer,useApplication)
         {
             
         }

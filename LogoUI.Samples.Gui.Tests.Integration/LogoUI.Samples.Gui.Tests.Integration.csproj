@@ -51,8 +51,26 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Solid.Fake.Core">
+      <HintPath>..\Lib\Solid\Solid.Fake.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Fake.Moq">
+      <HintPath>..\Lib\Solid\Solid.Fake.Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition">
+      <HintPath>..\Lib\Solid\Solid.Practices.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Composition.Desktop">
+      <HintPath>..\Lib\Solid\Solid.Practices.Composition.Desktop.dll</HintPath>
+    </Reference>
     <Reference Include="Solid.Practices.IoC">
       <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Tests.Core">
+      <HintPath>..\Lib\Solid\Solid.Tests.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Tests.NUnit">
+      <HintPath>..\Lib\Solid\Solid.Tests.NUnit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,6 +85,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shared\LogoUI.Samples.Client.Gui.Shared.csproj">
+      <Project>{86BCD015-0BC9-4374-B5A9-D70E0B88265F}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shell\LogoUI.Samples.Client.Gui.Shell.csproj">
       <Project>{70e2ad73-ddf2-4ab2-9951-00f127db3ca0}</Project>
       <Name>LogoUI.Samples.Client.Gui.Shell</Name>
