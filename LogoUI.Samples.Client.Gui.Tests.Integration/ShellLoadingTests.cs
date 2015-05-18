@@ -1,18 +1,16 @@
 ﻿using System.Windows.Threading;
 using Caliburn.Micro;
-using LogoFX.UI.Bootstrapping.SimpleContainer;
 using LogoFX.UI.Tests.Infra;
 using LogoUI.Samples.Client.Gui.Shell.ViewModels;
+using LogoUI.Samples.Gui.Tests.Shared;
 using NUnit.Framework;
-using Solid.Fake.Moq;
 using Solid.Practices.Scheduling;
-using Solid.Tests.NUnit;
 
 namespace LogoUI.Samples.Gui.Tests.Integration
 {
     [TestFixture]
     [Category("Integration")]
-    public class ShellLoadingTests : IntegrationTestsBase<ExtendedSimpleIocContainer,FakeFactory,ShellViewModel,TestBootstrapper>
+    public class ShellLoadingTests : IntegrationTestsBase
     {
         protected override ShellViewModel CreateRootObjectOverride(ShellViewModel rootObject)
         {
