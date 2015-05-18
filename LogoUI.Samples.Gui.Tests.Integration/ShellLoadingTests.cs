@@ -1,8 +1,11 @@
-﻿using Caliburn.Micro;
+﻿using System.Windows.Threading;
+using Caliburn.Micro;
 using LogoFX.UI.Bootstrapping.SimpleContainer;
+using LogoFX.UI.Tests.Infra;
 using LogoUI.Samples.Client.Gui.Shell.ViewModels;
 using NUnit.Framework;
 using Solid.Fake.Moq;
+using Solid.Practices.Scheduling;
 using Solid.Tests.NUnit;
 
 namespace LogoUI.Samples.Gui.Tests.Integration
@@ -20,6 +23,9 @@ namespace LogoUI.Samples.Gui.Tests.Integration
         [Test]
         public void Initialization_DoesNotThrow()
         {
+            TaskScheduler.Current = new SameThreadTaskScheduler();
+            Dispatch.Current = new SameThreadDispatch();
+
             Assert.DoesNotThrow(() => CreateRootObject());
         }
     }
