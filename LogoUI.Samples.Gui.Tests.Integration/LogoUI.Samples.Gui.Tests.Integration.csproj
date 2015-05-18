@@ -36,6 +36,9 @@
     <Reference Include="Caliburn.Micro.Platform">
       <HintPath>..\packages\Caliburn.Micro.2.0.2\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="CodeContracts">
+      <HintPath>..\Lib\CodeContracts.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.UI.Bootstraping.Contracts">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstraping.Contracts.dll</HintPath>
     </Reference>

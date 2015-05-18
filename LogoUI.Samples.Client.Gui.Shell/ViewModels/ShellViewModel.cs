@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Threading;
 using Caliburn.Micro;
 using LogoFX.Practices.IoC;
 using LogoFX.UI.Commanding;
@@ -79,8 +80,8 @@ namespace LogoUI.Samples.Client.Gui.Shell.ViewModels
         }
 
         private void GotoLogin()
-        {
-            _taskFactory.StartNew(() => Execute.BeginOnUIThread(() => _navigationService.Navigate<LoginViewModel>()));
+        {            
+            _taskFactory.StartNew(() => Dispatch.Current.OnUiThread(() => _navigationService.Navigate<LoginViewModel>()));         
         }
 
         private void OnDeactivated(object sender, DeactivationEventArgs e)
