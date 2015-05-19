@@ -3,7 +3,7 @@ using LogoUI.Samples.Client.Data.Providers.Contracts;
 
 namespace LogoUI.Samples.Gui.Tests.Integration.Fake
 {
-    class FakeLoginProvider : ILoginProvider
+    class FakeTestLoginProvider : ILoginProvider
     {
         public void Login(string userName, string password)
         {

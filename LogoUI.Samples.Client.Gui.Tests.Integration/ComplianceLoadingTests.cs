@@ -17,12 +17,18 @@ namespace LogoUI.Samples.Gui.Tests.Integration
     [Category("Integration")]
     public class ComplianceLoadingTests : IntegrationTestsBase
     {
+        protected override void TearDownOverride()
+        {
+            base.TearDownOverride();
+            Caliburn.Micro.AssemblySource.Instance.Clear();
+        }
+
         [Test]
         public void ServerReturnsComplianceRecords_ComplianceScreenIsAccessed_ComplianceRecordsAreDisplayed()
         {
             TaskScheduler.Current = new SameThreadTaskScheduler();
             Dispatch.Current = new SameThreadDispatch();
-            RegisterService<ILoginProvider>(new FakeLoginProvider());
+            RegisterService<ILoginProvider>(new FakeTestLoginProvider());
             const int numberOfRecords = 100;
             RegisterBuilder(ComplianceProviderBuilder.CreateBuilder().WithComplianceRecord(numberOfRecords));
 

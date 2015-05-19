@@ -9,7 +9,13 @@ namespace LogoUI.Samples.Gui.Tests.Integration
     [TestFixture]
     [Category("Integration")]
     public class ShellLoadingTests : IntegrationTestsBase
-    {        
+    {
+        protected override void TearDownOverride()
+        {
+            base.TearDownOverride();
+            Caliburn.Micro.AssemblySource.Instance.Clear();
+        }
+
         [Test]
         public void Initialization_DoesNotThrow()
         {

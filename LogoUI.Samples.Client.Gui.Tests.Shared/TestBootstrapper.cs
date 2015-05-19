@@ -1,10 +1,10 @@
 ﻿using LogoFX.UI.Bootstrapping.SimpleContainer;
-using LogoUI.Samples.Client.Gui.Shell;
+using BootstrapperBase = LogoUI.Samples.Client.Gui.Shell.BootstrapperBase;
 
 namespace LogoUI.Samples.Gui.Tests.Shared
 {
     public class TestBootstrapper : BootstrapperBase
-    {
+    {        
         public TestBootstrapper(ExtendedSimpleIocContainer iocContainer) : base(iocContainer,useApplication:false)
         {
         }
