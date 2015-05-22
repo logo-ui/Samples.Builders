@@ -1,5 +1,5 @@
-﻿using Solid.Fake.Core;
-using Solid.Fake.Moq;
+﻿using Attest.Fake.Core;
+using Attest.Fake.Moq;
 
 namespace LogoUI.Samples.Fake.Builders
 {

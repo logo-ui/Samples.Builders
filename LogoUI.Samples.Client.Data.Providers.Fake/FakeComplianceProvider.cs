@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using Attest.Fake.Builders;
 using LogoUI.Samples.Client.Data.Contracts;
 using LogoUI.Samples.Client.Data.Providers.Contracts;
 using LogoUI.Samples.Fake.Builders;
-using Solid.Fake.Builders;
 
 namespace LogoUI.Samples.Client.Data.Providers.Fake
 {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Attest.Fake.Builders;
+using Attest.Fake.Moq;
 using LogoUI.Samples.Client.Data.Contracts;
 using LogoUI.Samples.Client.Data.Providers.Contracts;
-using Solid.Fake.Builders;
-using Solid.Fake.Moq;
 
 namespace LogoUI.Samples.Fake.Builders
 {

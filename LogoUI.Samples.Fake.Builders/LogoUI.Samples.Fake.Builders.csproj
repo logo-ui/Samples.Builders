@@ -39,17 +39,17 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Attest.Fake.Builders">
+      <HintPath>..\Lib\Attest\Attest.Fake.Builders.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Core">
+      <HintPath>..\Lib\Attest\Attest.Fake.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Attest.Fake.Moq">
+      <HintPath>..\Lib\Attest\Attest.Fake.Moq.dll</HintPath>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Fake.Builders">
-      <HintPath>..\Lib\Solid\Solid.Fake.Builders.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Fake.Core">
-      <HintPath>..\Lib\Solid\Solid.Fake.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Fake.Moq">
-      <HintPath>..\Lib\Solid\Solid.Fake.Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
