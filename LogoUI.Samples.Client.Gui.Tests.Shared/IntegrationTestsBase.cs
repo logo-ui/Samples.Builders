@@ -1,17 +1,20 @@
-﻿using Attest.Fake.Moq;
-using Attest.Tests.NUnit;
-using Caliburn.Micro;
+﻿using System.Windows.Threading;
+using Attest.Fake.Moq;
 using LogoFX.UI.Bootstrapping.SimpleContainer;
+using LogoFX.UI.Tests.Core;
+using LogoFX.UI.Tests.Infra;
 using LogoUI.Samples.Client.Gui.Shell.ViewModels;
+using Solid.Practices.Scheduling;
 
 namespace LogoUI.Samples.Gui.Tests.Shared
 {
-    public abstract class IntegrationTestsBase : IntegrationTestsBase<ExtendedSimpleIocContainer, FakeFactory, ShellViewModel, TestBootstrapper>
+    public abstract class IntegrationTestsBase : TestsBase<ExtendedSimpleIocContainer, FakeFactory, ShellViewModel, TestBootstrapper>
     {
-        protected override ShellViewModel CreateRootObjectOverride(ShellViewModel rootObject)
+        protected override void SetupOverride()
         {
-            ScreenExtensions.TryActivate(rootObject);
-            return rootObject;
+            base.SetupOverride();
+            TaskScheduler.Current = new SameThreadTaskScheduler();
+            Dispatch.Current = new SameThreadDispatch();
         }
     }
 }

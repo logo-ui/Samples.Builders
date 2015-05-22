@@ -57,11 +57,26 @@
     <Reference Include="LogoFX.UI.Bootstrapping.SimpleContainer">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstrapping.SimpleContainer.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.UI.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Core.dll</HintPath>
+    </Reference>
     <Reference Include="LogoFX.UI.Navigation">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Navigation.dll</HintPath>
     </Reference>
+    <Reference Include="LogoFX.UI.Tests.Core">
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Tests.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Tests.Infra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Tests.Infra.dll</HintPath>
+    </Reference>
     <Reference Include="Solid.Practices.IoC">
       <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Scheduling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Solid\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

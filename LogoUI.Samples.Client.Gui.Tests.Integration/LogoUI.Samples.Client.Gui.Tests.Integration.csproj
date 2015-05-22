@@ -75,8 +75,9 @@
     <Reference Include="LogoFX.UI.Navigation">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.Navigation.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.UI.Tests.Infra">
-      <HintPath>..\Lib\LogoFX\LogoFX.UI.Tests.Infra.dll</HintPath>
+    <Reference Include="LogoFX.UI.Tests.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Tests.Core.dll</HintPath>
     </Reference>
     <Reference Include="LogoFX.UI.ViewModels">
       <HintPath>..\Lib\LogoFX\LogoFX.UI.ViewModels.dll</HintPath>
@@ -102,10 +103,6 @@
     <Reference Include="Solid.Practices.Modularity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Solid\Solid.Practices.Modularity.dll</HintPath>
-    </Reference>
-    <Reference Include="Solid.Practices.Scheduling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Bin\DebugWithFake\Solid.Practices.Scheduling.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
