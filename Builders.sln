@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Gui.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Gui.Tests.Shared", "LogoUI.Samples.Client.Gui.Tests.Shared\LogoUI.Samples.Client.Gui.Tests.Shared.csproj", "{82E1E02D-DFE6-4465-BFDF-175ACC44650B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Gui.Tests.Fake", "LogoUI.Samples.Client.Gui.Tests.Fake\LogoUI.Samples.Client.Gui.Tests.Fake.csproj", "{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,16 @@ Global
 		{82E1E02D-DFE6-4465-BFDF-175ACC44650B}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
 		{82E1E02D-DFE6-4465-BFDF-175ACC44650B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82E1E02D-DFE6-4465-BFDF-175ACC44650B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.DebugWithFake|Any CPU.ActiveCfg = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.DebugWithFake|Any CPU.Build.0 = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.DebugWithMock|Any CPU.ActiveCfg = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.DebugWithMock|Any CPU.Build.0 = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,5 +238,6 @@ Global
 		{2C93C09C-99DE-4C24-9BB3-EC72C542B0F7} = {AE714F63-AB90-4B46-8F95-251C5EE06C46}
 		{9C3F7109-8D52-4067-961B-258B2F86EBDA} = {CC7F8F49-BCC3-4256-8190-AD318B8A0FD4}
 		{82E1E02D-DFE6-4465-BFDF-175ACC44650B} = {CC7F8F49-BCC3-4256-8190-AD318B8A0FD4}
+		{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58} = {CC7F8F49-BCC3-4256-8190-AD318B8A0FD4}
 	EndGlobalSection
 EndGlobal

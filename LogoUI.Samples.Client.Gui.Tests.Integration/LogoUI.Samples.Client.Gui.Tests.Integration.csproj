@@ -109,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComplianceLoadingTests.cs" />
-    <Compile Include="Fake\FakeTestLoginProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShellLoadingTests.cs" />
   </ItemGroup>
@@ -136,6 +135,10 @@
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Shell\LogoUI.Samples.Client.Gui.Shell.csproj">
       <Project>{70e2ad73-ddf2-4ab2-9951-00f127db3ca0}</Project>
       <Name>LogoUI.Samples.Client.Gui.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Tests.Fake\LogoUI.Samples.Client.Gui.Tests.Fake.csproj">
+      <Project>{715218A0-50F6-4D8E-AEEA-7ED90C5C1F58}</Project>
+      <Name>LogoUI.Samples.Client.Gui.Tests.Fake</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Tests.Shared\LogoUI.Samples.Client.Gui.Tests.Shared.csproj">
       <Project>{82e1e02d-dfe6-4465-bfdf-175acc44650b}</Project>

@@ -3,8 +3,8 @@ using LogoUI.Samples.Client.Data.Providers.Contracts;
 using LogoUI.Samples.Client.Gui.Modularity.ViewModels;
 using LogoUI.Samples.Client.Gui.Modules.Compliance.ViewModels;
 using LogoUI.Samples.Client.Gui.Shell.ViewModels;
+using LogoUI.Samples.Client.Gui.Tests.Fake;
 using LogoUI.Samples.Fake.Builders;
-using LogoUI.Samples.Gui.Tests.Integration.Fake;
 using LogoUI.Samples.Gui.Tests.Shared;
 using NUnit.Framework;
 
